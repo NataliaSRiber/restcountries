@@ -1,0 +1,40 @@
+<nav class="bg-gray-800 p-4">
+  <div class="flex justify-between items-center">
+    <div class="text-white text-lg font-bold">
+      Countries
+    </div>
+    <div class="flex items-center space-x-4">
+      <!-- Campo de Pesquisa -->
+      <input 
+        type="search"
+        [formControl]="input"
+        placeholder="Pesquisar País..." 
+        class="bg-gray-700 text-white p-2 rounded" 
+      />
+      
+      <!-- Select para Filtro de Continente -->
+      <select class="bg-gray-700 text-white p-2 rounded">
+        <option value="">Selecione um Continente</option>
+        <option value="africa">África</option>
+        <option value="americas">Américas</option>
+        <option value="asia">Ásia</option>
+        <option value="europe">Europa</option>
+        <option value="oceania">Oceania</option>
+      </select>
+      
+      <!-- Select para Filtro de Idioma -->
+      <select class="bg-gray-700 text-white p-2 rounded">
+        <option value="">Selecione um Idioma</option>
+        <option value="pt">Português</option>
+        <option value="es">Espanhol</option>
+        <option value="en">Inglês</option>
+      </select>
+      
+      <!-- Botão de Pesquisa -->
+      <button (click)="onSearch()" class="bg-blue-500 text-white p-2 rounded">
+        Pesquisar
+      </button>
+    </div>
+  </div>
+</nav>
+
