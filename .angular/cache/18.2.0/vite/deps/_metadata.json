@@ -1,0 +1,73 @@
+{
+  "hash": "31bbdd9c",
+  "configHash": "d95b5ecf",
+  "lockfileHash": "779f4d27",
+  "browserHash": "0226f779",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "3f92174f",
+      "needsInterop": false
+    },
+    "@angular/common/http": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "e17a44a5",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "eb093d04",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "fa84f41a",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "c3c01cdb",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "89492286",
+      "needsInterop": false
+    },
+    "ngx-pagination": {
+      "src": "../../../../../node_modules/ngx-pagination/fesm2020/ngx-pagination.mjs",
+      "file": "ngx-pagination.js",
+      "fileHash": "caede21c",
+      "needsInterop": false
+    },
+    "rxjs/operators": {
+      "src": "../../../../../node_modules/rxjs/dist/esm5/operators/index.js",
+      "file": "rxjs_operators.js",
+      "fileHash": "75f648a2",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-I6TRCLSG": {
+      "file": "chunk-I6TRCLSG.js"
+    },
+    "chunk-CLLQYEN5": {
+      "file": "chunk-CLLQYEN5.js"
+    },
+    "chunk-EIUVGRN4": {
+      "file": "chunk-EIUVGRN4.js"
+    },
+    "chunk-NKUNHLBV": {
+      "file": "chunk-NKUNHLBV.js"
+    },
+    "chunk-D6GFGIVB": {
+      "file": "chunk-D6GFGIVB.js"
+    }
+  }
+}
