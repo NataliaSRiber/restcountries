@@ -1,0 +1,16 @@
+<div class="details-container" *ngIf="country">
+  <h1>{{ country.name.common }}</h1>
+  <img [src]="country.flags.svg" alt="{{ country.name.common }} Flag" class="flag" />
+  
+  <div class="details-content">
+    <ul class="text-lg">
+      <li><strong>Capital:</strong> {{ country.capital }}</li>
+      <li><strong>População:</strong> {{ country.population | number }}</li>
+      <li><strong>Região:</strong> {{ country.region }}</li>
+      <li><strong>Sub-região:</strong> {{ country.subregion }}</li>
+      <li><strong>Idiomas:</strong> {{ country.languages | replaceKeys }}</li>
+      <li><strong>Moeda:</strong> {{ country.currencies | replaceKeys }}</li>
+    </ul>
+  </div>
+</div>
+
