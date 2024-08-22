@@ -22,4 +22,11 @@ export class CountryService {
     return this.http.get<any[]>(`${this.baseUrl}/name/${name}`).pipe(map(data => data[0] ))
   }
   
+  getFilteredCountriesByRegion(region: string): Observable<any[]> {
+    return this.http.get<any[]>(`${this.baseUrl}/region/${region}`).pipe(map(data => data[0] ))
+  }
+
+  getFilteredCountriesByLanguage(language: string): Observable<any[]> {
+    return this.http.get<any[]>(`${this.baseUrl}/translation/${language}`).pipe(map(data => data[0] ))
+  }
 }

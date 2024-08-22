@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { CardsListComponent } from '../cards-list/cards-list.component';
 import { CountryService } from '../country.service';
-import { FormControl } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { SearchService } from '../search.service';
 
 @Component({
@@ -14,17 +14,27 @@ import { SearchService } from '../search.service';
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
+  // formGroup para todos os filtros
+  input = new FormControl('');
+  selectedContinent: string = '';
+  selectedLanguage: string = '';
   collection: any[] = [];
   isLoading = true;
   // p: number = 1;
   // itemsPerPage: number = 10;
 
-  input = new FormControl<string>('');
-  
   constructor(
+    private fb: FormBuilder,
     private countryService: CountryService,
     // private searchService: SearchService,
-  ) {}
+  ) {
+    //inicializar o form group
+    // this.form = this.fb.group({
+    //   search: [''],
+    //   continent: [''],
+    //   language: ['']
+    // })
+  }
   
   ngOnInit(): void {
     this.loadCountries();
@@ -47,6 +57,15 @@ export class HomeComponent implements OnInit {
       }
     })
   }
+
+  // onSearch() {
+  //   this.isLoading = true;
+    
+  //   // const { search, continent, language } = this.form.value;
+
+  //   // Chama o serviço para obter todos os países ou aplicar os filtros
+  //   this.countryService.
+  // }
 
   // onSearch(inputValue: string) {
   //   this.isLoading = true;

@@ -1,10 +1,10 @@
 <div class="p-4 flex justify-center">
-  <div class="w-full">
+  <div class="w-full ">
     <h1 class="text-3xl font-bold mb-6 text-center p-8">Lista de países</h1>
-    @if ("collection.length > 0; else noData") {
+    @if ("collection.length === 0; else noData") {
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         @for (country of collection; track $index) {
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105 cursor-pointer" (click)="goToDetailsPage(country.name.common)">
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105 cursor-pointer h-72" (click)="goToDetailsPage(country.name.common)">
             <img src="{{ country.flags.png }}" alt="{{ country.name.common }}" class="w-full h-40 object-cover" />
             <div class="p-4">
               <h2 class="text-xl font-semibold mb-2 text-center">{{ country.name.official }}</h2>
