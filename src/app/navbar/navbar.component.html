@@ -4,35 +4,31 @@
       Countries
     </div>
     <div class="flex items-center space-x-4">
-      <!-- Campo de Pesquisa -->
       <input 
         type="search"
         [formControl]="input"
-        placeholder="Pesquisar País..." 
+        placeholder="Search for a country name..." 
         class="bg-gray-700 text-white p-2 rounded" 
       />
-      
-      <!-- Select para Filtro de Continente -->
-      <select class="bg-gray-700 text-white p-2 rounded">
-        <option value="">Selecione um Continente</option>
-        <option value="africa">África</option>
-        <option value="americas">Américas</option>
-        <option value="asia">Ásia</option>
-        <option value="europe">Europa</option>
+      <select (change)="onContinentChange($event)" 
+        class="bg-gray-700 text-white p-2 rounded">
+        <option value="">Select a Continent</option>
+        <option value="africa">Africa</option>
+        <option value="americas">Americas</option>
+        <option value="asia">Asia</option>
+        <option value="europe">Europe</option>
         <option value="oceania">Oceania</option>
       </select>
-      
-      <!-- Select para Filtro de Idioma -->
-      <select class="bg-gray-700 text-white p-2 rounded">
-        <option value="">Selecione um Idioma</option>
-        <option value="pt">Português</option>
-        <option value="es">Espanhol</option>
-        <option value="en">Inglês</option>
+      <select  
+      (change)="onLanguageChange($event)"  class="bg-gray-700 text-white p-2 rounded">
+        <option value="">Select a language</option>
+        <option value="english">Arabic</option>
+        <option value="english">English</option>
+        <option value="portuguese">Portuguese</option>
+        <option value="spanish">Spanish</option>
       </select>
-      
-      <!-- Botão de Pesquisa -->
       <button (click)="onSearch()" class="bg-blue-500 text-white p-2 rounded">
-        Pesquisar
+        Search
       </button>
     </div>
   </div>
