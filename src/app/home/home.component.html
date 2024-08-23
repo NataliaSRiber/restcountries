@@ -1,2 +1,4 @@
-<app-navbar  (search)="onSearch($event)"/>
+<app-navbar  (search)="onSearch($event)" 
+(continentChange)="onContinentSearch($event)" 
+(languageChange)="onLanguageSearch($event)"/>
 <app-cards-list [collection]="collection" [isLoading]="isLoading" />
