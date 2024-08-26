@@ -23,10 +23,16 @@ export class CountryService {
   }
   
   getFilteredCountriesByRegion(region: string): Observable<any[]> {
-    return this.http.get<any[]>(`${this.baseUrl}/region/${region}`).pipe(map(data => data ))
+    return this.http.get<any[]>(`${this.baseUrl}/region/${region}`).pipe(
+      map((data: any[]) => data.sort((a, b) => a.name.official.localeCompare(b.name.official))
+      )
+    );
   }
 
   getFilteredCountriesByLanguage(language: string): Observable<any[]> {
-    return this.http.get<any[]>(`${this.baseUrl}/lang/${language}`).pipe(map(data => data ))
+    return this.http.get<any[]>(`${this.baseUrl}/lang/${language}`).pipe(
+      map((data: any[]) => data.sort((a, b) => a.name.official.localeCompare(b.name.official))
+      )
+    );
   }
 }
