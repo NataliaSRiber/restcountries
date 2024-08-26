@@ -12,9 +12,9 @@ export class CountryService {
 
   getCountries(): Observable<any[]> {
     return this.http.get<any[]>(`${this.baseUrl}/all`).pipe(
-      // função de comparação de strings para determinar a ordem de duas strings
-      map((countries: any[]) => countries.sort((a, b) => a.name.official.localeCompare(b.name.official))
-      )
+    // função de comparação de strings para determinar a ordem de duas strings
+    map((countries: any[]) => countries.sort((a, b) => a.name.official.localeCompare(b.name.official))
+    )
     );
   }
 
@@ -24,15 +24,15 @@ export class CountryService {
   
   getFilteredCountriesByRegion(region: string): Observable<any[]> {
     return this.http.get<any[]>(`${this.baseUrl}/region/${region}`).pipe(
-      map((data: any[]) => data.sort((a, b) => a.name.official.localeCompare(b.name.official))
-      )
+    map((data: any[]) => data.sort((a, b) => a.name.official.localeCompare(b.name.official))
+    )
     );
   }
 
   getFilteredCountriesByLanguage(language: string): Observable<any[]> {
     return this.http.get<any[]>(`${this.baseUrl}/lang/${language}`).pipe(
-      map((data: any[]) => data.sort((a, b) => a.name.official.localeCompare(b.name.official))
-      )
+    map((data: any[]) => data.sort((a, b) => a.name.official.localeCompare(b.name.official))
+    )
     );
   }
 }
