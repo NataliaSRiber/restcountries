@@ -1,7 +1,8 @@
 <div class="p-4 flex justify-center">
   <div class="w-full items-center justify-center">
     <h1 class="text-3xl font-bold mb-6 text-center p-8">List of countries</h1>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div [ngClass]="{ 'grid-cols-1 justify-center': collection.length === 1, 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4': collection.length > 1 }" 
+      class="grid gap-6">
       @for (country of collection; track $index) {
         <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:scale-105 cursor-pointer h-72" (click)="goToDetailsPage(country.name.common)">
           <img src="{{ country.flags.png }}" alt="{{ country.name.common }}" class="w-full h-40 object-cover" />
