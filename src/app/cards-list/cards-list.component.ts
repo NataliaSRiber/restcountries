@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgxPaginationModule, PaginationInstance } from 'ngx-pagination';
@@ -5,7 +6,7 @@ import { NgxPaginationModule, PaginationInstance } from 'ngx-pagination';
 @Component({
   selector: 'app-cards-list',
   standalone: true,
-  imports: [ NgxPaginationModule],
+  imports: [ NgxPaginationModule, CommonModule],
   templateUrl: './cards-list.component.html',
   styleUrl: './cards-list.component.css'
 })
